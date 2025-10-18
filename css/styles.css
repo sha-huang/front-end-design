@@ -1,7 +1,7 @@
 body {
     background-color: #edefee;
-    font-family: 'Markazi', serif;
-    margin: 3rem 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
 h1 {
@@ -29,6 +29,15 @@ nav li {
 
 section {
     display: flex;
+    padding: 2rem;
+}
+
+section:nth-of-type(2) { background-color: lightblue; }
+
+@media (max-width: 1000px) {
+    section {
+        flex-direction: column;
+    }
 }
 
 article {
