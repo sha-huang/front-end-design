@@ -10,21 +10,53 @@ h1 {
 
 h2 {
     font-size: 2rem;
+    text-align: center;
 }
 
 header > img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding: 1rem;
+}
+
+nav {
+    background-color: lightblue;
 }
 
 nav ul {
     list-style: none;
     text-align: center;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 nav li {
-    display: inline-block;
+    font-size: 2rem;
+    padding: 1rem 3rem;
+}
+
+nav li:hover {
+    background-color: lightgreen;
+}
+
+a {
+    text-decoration: none;
+    color: darkgoldenrod;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-color: darkgoldenrod;
+    transition: 0.7s;
+}
+
+#banner {
+    background-image: url('../img/Italian_food.png');
+}
+
+#banner::before {
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 section {
@@ -32,9 +64,7 @@ section {
     padding: 2rem;
 }
 
-section:nth-of-type(2) { background-color: lightblue; }
-
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     section {
         flex-direction: column;
     }
@@ -42,12 +72,41 @@ section:nth-of-type(2) { background-color: lightblue; }
 
 article {
     flex: 1;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 0.8rem;
+}
+
+article:hover {
+    transition: 0.7s;
+    box-shadow: 0 0 30px lightseagreen;
+}
+
+button {
+    padding: 15px;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    background-color: tomato;
+}
+
+button:hover {
+    background-color: red;
+}
+
+button:active {
+    box-shadow: inset -2px -2px 3px rgb(255 255 255 / 0.6), inset 2px 2px 3px rgb(0 0 0 / 0.6);
 }
 
 footer {
     display: flex;
+    background-color: lightcyan;
 }
 
 footer div {
     flex: 1;
+    padding: 1rem 5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
 }
